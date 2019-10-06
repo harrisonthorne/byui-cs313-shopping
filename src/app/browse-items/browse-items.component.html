@@ -1,1 +1,6 @@
-<p>browse-items works!</p>
+<div *ngFor="let i of mainItems">
+    <img [src]="'assets/images/' + i.imgName" alt="">
+    <p><b> {{ i.name }} </b></p> 
+    <p> {{ i.price }} </p>
+    <button class="main" (click)="addToCart(i)">Add to cart</button>
+</div>

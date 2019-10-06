@@ -8,20 +8,25 @@ import { ViewCartComponent } from 'src/app/view-cart/view-cart.component';
 
 const routes: Routes = [
     {
-        path: '/browse',
+        path: 'browse',
         component: BrowseItemsComponent
     },
     {
-        path: '/checkout',
+        path: 'checkout',
         component: CheckoutComponent
     },
     {
-        path: '/confirm',
+        path: 'confirm',
         component: ConfirmationPageComponent
     },
     {
-        path: '/cart',
+        path: 'cart',
         component: ViewCartComponent
+    },
+    {
+        path: '**',
+        pathMatch: 'full',
+        redirectTo: 'browse'
     }
 ];
 
